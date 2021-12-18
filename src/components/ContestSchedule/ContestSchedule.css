@@ -1,0 +1,110 @@
+body{
+    background-color: var(--darkPanel);
+}
+body.dark{
+    background-color: var(--border-grey);
+}
+.ContestSchedule{
+    padding-top: 70px;
+}
+select.dark-theme{
+    background: none;
+}
+select{
+    background-color: var(--darkPanel);
+    color: var(--lighttext) !important;
+    width: 60%;
+    padding: 1rem;
+    border: 1px solid var(--lighttext);
+    outline: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+select option{
+    background-color: var(--lighttext);
+    color: var(--darktext);
+    padding: 1rem;
+}
+#contest-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-content: center;
+    justify-content: space-around;
+}
+.contest-main-header{
+    color :var(--lighttext);
+    margin: 50px 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.contest {
+  /* background: var(--extra-clr-light); */
+  border: 1px solid var(--lighttext);
+  padding: 15px 20px;
+  box-shadow: 10px 10px 20px 1px var(--shadow);
+  border-radius: 10px;
+  width: 340px;
+  position: relative;
+  padding-bottom: 80px;
+  padding-left: 20px;
+}
+.contest > p{
+    color: var(--lighttext);
+    opacity: 0.8;
+    margin: 5px 0px;
+}
+.contest > a{
+    text-decoration: none;
+}
+.contest-header {
+    color: var(--lighttext);
+  letter-spacing: 1px;
+  font-size: 25px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contest-link{
+    padding: 0.8rem; 
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    color: var(--lighttext);
+    background: linear-gradient(45deg, var(--darkPanel), var(--border-grey));
+    transition: all 0.3s ease-in-out;
+    font-weight: 700;
+    width: 200px;
+    display: flex;
+    margin: auto;
+    border:1px solid var(--lighttext);
+    margin-top: 0.8rem;
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contest-link:hover{
+    font-weight: 700;
+}
+.contest-link span:first-child {
+    line-height: 20px;
+    margin-left: 5%;
+}
+.contest-link span:last-child {
+    margin-left: 10%;
+    transition: margin-left 0.5s ease;
+}
+
+.contest-link:hover span:last-child {
+    margin-left: 15%;
+}
+
+.contest-container{
+    color: var(--lighttext);
+    margin: 50px 0px;
+    padding:0px 10%;
+}

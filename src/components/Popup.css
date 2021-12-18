@@ -1,0 +1,68 @@
+/* Modal & Popup CSS*/
+.modal{
+    padding: 1rem;
+}
+
+.close{
+    border:none;
+    cursor: pointer;
+    color: var(--lighttext);
+    padding: 0.5rem;
+    background: none;
+}
+
+.header{
+    margin:0px;
+}
+
+.modal__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+}
+
+.button{
+ display: flex;
+ align-items: center;
+ margin-top: 0.5rem;
+ padding: 0.5rem 1rem;
+ border: none;
+ border-radius: 3px;
+ background-color:#eee;
+ color: var(--lighterDark);
+ cursor: pointer;
+ outline: none;
+}
+
+#github__icon{
+    margin-left: 0.5rem;
+}
+
+b{ 
+    padding: 0.1rem ;
+    line-height: 1.3rem;
+    color: var(--darkPanel);
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+   .popup-content{
+       width: 90%;
+   }
+}
+.actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 0.5rem;
+}
+.actions button{
+    background: none;
+}
+.modal a{
+    text-decoration: none;
+    color: var(--darktext);
+    font-weight: 600;
+}

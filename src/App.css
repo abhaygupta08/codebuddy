@@ -1,0 +1,145 @@
+button{
+  background: none;
+}
+/* Top Navigation */
+.top__nav {
+  display: flex;
+  background-color: #eee;
+  position: fixed;
+  min-height: 70px;
+  padding: 0rem 1.25rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.info__section {
+  /* width: 17rem; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.toggleIcon{
+  display: none;
+}
+
+.info__section > div > span > a {
+  color: #000;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+
+.info__section > div > span > a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.info__section > div > span > a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+
+
+.info__section > img{
+  margin-bottom: 0.3rem;
+  margin-left: 0.625rem;
+}
+
+.logo__info {
+  display: flex;
+  align-items: center;
+}
+
+#logo__name {
+  margin-left: 0.625rem;
+  text-decoration: none;
+}
+.min-infoSec{
+  display: flex;
+  gap: 1rem;
+}
+/* width */
+::-webkit-scrollbar {
+  cursor: pointer;
+  width: 8px;
+}
+
+/* ScrollBar Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* ScrollBar Handle */
+::-webkit-scrollbar-thumb {
+  background: blueviolet;
+}
+
+/* ScrollBar Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(137, 43, 226, 0.548);
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+  #logo__name {
+    font-size: 0.9rem;
+  }
+  .select__bar{
+    margin-top: 100px;
+  }
+  .toggleIcon{
+    cursor: pointer;
+    display: block;
+    z-index: 2;
+    border: none;
+    background: none;
+}
+.info__section{
+    display: none;
+}
+}
+
+.lang-button{
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+  background: transparent;
+  border:1px solid var(--border-grey);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+.lang-button:hover{
+  background: linear-gradient(45deg, var(--bg-clr-light) ,var(--darkPanel));
+  border:1px solid var(--border-grey);
+}
+.lang-active{
+  background: linear-gradient(45deg, var(--bg-clr-light) ,var(--darkPanel));
+  border:1px solid var(--border-grey);
+}
+
+
+.docs-container{
+  color: var(--lighttext);
+  padding: 2rem;
+  padding-top: 120px;
+}
+.docs-container a{
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--lighttext);
+}

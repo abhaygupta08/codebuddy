@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="761px" height="900px" viewBox="0 0 761 900" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Path 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1800" height="900"></rect>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Werk-1" transform="translate(-1664.000000, 0.000000)">
+            <g id="Path-2" transform="translate(767.000000, 0.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <path d="M1656.93193,1.70530257e-13 C1660.12655,167.85314 1550.86918,251.779709 1329.15985,251.779709 C1120.82346,251.779709 1073.30252,377.33388 1186.59704,628.44222 L1186.59704,628.442219 C1192.95672,642.53793 1186.68542,659.120295 1172.58971,665.479968 C1167.53971,667.758414 1161.9273,668.487526 1156.46277,667.575029 C989.515464,639.697273 904.361208,681.505596 901,793 C897.294118,915.927562 896.943973,973.21402 899.949567,964.859375" stroke-opacity="0.15" stroke="#191A1E" style="mix-blend-mode: multiply;" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

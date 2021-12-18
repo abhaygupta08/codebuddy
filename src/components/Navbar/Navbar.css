@@ -1,0 +1,67 @@
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.sidebar-overlay{
+    opacity: 0.6;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+.sidebar-content{
+    background-color: var(--darkerLight);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('http://localhost:3000/assets/bg.svg');
+    z-index: 2;
+    height: 100vh;
+    padding: 1.5rem;
+    transition:width 3s ease-in-out;
+}
+
+
+.nav-left{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 50px;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 14rem;
+}
+.menuitem-mobile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    color: var(--darktext);
+    transition: gap 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.menuitem-mobile:hover{
+    gap: 1rem;
+}
+.nav-left a{
+    text-decoration: none;
+}
+.mobile-menu-links{
+    display: flex;
+    gap: 1rem;
+    height: 30px;
+    align-items: center;
+    transform: scale(1.2);
+}
+.infoTrigger{
+    margin-top: 0px !important;
+}
+
+@media screen and (max-width:600px) {
+    .infoTrigger{
+        margin-top: -5px !important;
+    }
+}
