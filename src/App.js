@@ -70,7 +70,7 @@ const Docs = () => (
       <div>
         Link for Code Runner API :
         &nbsp;
-        <a href="https://github.com/Jaagrav/CodeX#something-special-for-other-developers">CodeX</a>
+        <a href="https://cpbuddy-backend.herokuapp.com/">CP-Buddy Backend</a>
       </div>
       <br />
       <div>
