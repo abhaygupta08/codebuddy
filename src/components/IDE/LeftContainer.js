@@ -6,6 +6,12 @@ import Popup from 'reactjs-popup';
 import PropTypes from 'prop-types';
 import { useTheme } from '../../reducer/context/Themeprovider';
 
+const useLangExtension = (ext) => {
+  if (ext === 'py') return 'python';
+  if (ext === 'cs') return 'csharp';
+  return ext;
+};
+
 const LeftContainer = ({
   pre, ext, updateOutput, updateLoading,
 }) => {
@@ -23,21 +29,22 @@ const LeftContainer = ({
   const handleSubmit = (e) => {
     e.preventDefault();
     updateLoading('true');
-    const data = {
-      language: ext,
-      code,
-      input,
-    };
 
+    const data = {
+      stdin: input || '',
+      files: [{
+        name: `cpBuddy.${useLangExtension(ext)}`,
+        content: code.trim(),
+      }],
+    };
     axios
-      // .post('/api/compile', data)
-      .post('https://editor-backend-v1.herokuapp.com/compile', data)
+      .post('https://cpbuddy-backend.herokuapp.com/api/v1', data)
       .then((res) => {
         updateLoading('false');
-        if (res.data.result.output.search('error') !== -1) {
-          return updateOutput(res, 'error');
-        }
-        return updateOutput(res, 'response');
+        // console.log(res);
+        if (res.data.stderr && res.data.stderr.length > 0) return updateOutput(res.data.stderr, 'success');
+        if (res.data.error && res.data.error.length > 0) return updateOutput(res.data.error, 'error');
+        return updateOutput(res.data.stdout, 'response');
       })
       .catch((err) => updateOutput(err, 'error'));
   };
@@ -128,4 +135,8 @@ LeftContainer.propTypes = {
   updateOutput: PropTypes.func.isRequired,
   updateLoading: PropTypes.func.isRequired,
 };
+useLangExtension.propTypes = {
+  ext: PropTypes.string.isRequired,
+};
+
 export default LeftContainer;
