@@ -23,8 +23,6 @@ Frontend Deploy Link - <a href="https://codebuddyapp.netlify.app/">https://codeb
 <h4>IDE</h4>
 <img src='./client/src/assets/ideScreenshot.png' alt=''>
 <br/>
-<br/>
-<br/>
 <h4>Contest Watcher</h4>
 <img src='./client/src/assets/contestWatcherScreenshot.png' alt=''>
 <br>
