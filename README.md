@@ -1,22 +1,38 @@
 <div align="center">
-  <img src="./config/../public/assets/banner.jpg" /> <br/>
-<img src="https://img.shields.io/static/v1?label=TECHnology&message=REACT&color=blueviolet&style=for-the-badge"/>
-  <img src="https://img.shields.io/static/v1?label=version&message=1.0.0&color=orange&style=for-the-badge"/>
+  <img src="./client/src/assets/codeBuddyBanner.svg" width='336px' /> <br/>
+<i>Code Buddy is your all-in-one Coding platform, which includes numerous micro-services like Code Runner, Code sharing and Contest Watcher that is intended to assist Competitive Programming enthusiasts.</i>
+<br>
+<br>
+<div><img src="https://img.shields.io/static/v1?label=TECH%20STACK&message=MERN&color=blueviolet&style=for-the-badge"/>
+  <img src="https://img.shields.io/static/v1?label=version&message=2.0.0&color=orange&style=for-the-badge"/>
   <img src="https://img.shields.io/static/v1?label=status&message=working&color=success&style=for-the-badge"/>
-  <img src="https://img.shields.io/static/v1?label=open%20for%20contribution&message=yes&color=informational&style=for-the-badge"/>
-</div>
+  <img src="https://img.shields.io/static/v1?label=test&message=passing&color=informational&style=for-the-badge"/>
+  </div>
 <br>
-<h1> CP BUDDY [Web App] </h1>
+</div>
 
-This **Application** is designed using **React** (primarily) and have implementions of micro-services, `Code Runner` and `Upcoming Contest Watcher` that helps Competitive Programming enthusiasts with Productivity.
-<br>
-<h2>Live Preview</h2>
-Deploy Link - <a href="https://cp-buddy.netlify.app/">https://cp-buddy.netlify.app/</a>
-<br/>
+
 <div align="center">
-<img src="/config/cp-buddy.png" alt="preview"/>
+Deployed Backend(server) URL - <a href="https://code-buddybackend.herokuapp.com/">https://code-buddybackend.herokuapp.com/</a>
+
 </div>
+
+<h2>Live Preview</h2>
+Frontend Deploy Link - <a href="https://codebuddyapp.netlify.app/">https://codebuddyapp.netlify.app/</a>
+<br/>
+<h4>IDE</h4>
+<img src='./client/src/assets/ideScreenshot.png' alt=''>
+<br/>
+<br/>
+<br/>
+<h4>Contest Watcher</h4>
+<img src='./client/src/assets/contestWatcherScreenshot.png' alt=''>
 <br>
+## 👩‍💻 Tech Stack 
+**Frontend** - HTML5, CSS3, JS, Axios, TailwindCSS, Reactjs
+**Backend** - Nodejs, Expressjs, MongoDB
+**Tools** - Netlify, Heroku, Git, VS Code, Postman
+
 <h2>📝 Contribution </h2>
 This repo is open to contribution and modifications,<br>
 - <b>Star</b> this Repository.<br>
@@ -26,17 +42,13 @@ This repo is open to contribution and modifications,<br>
 - <b>Push</b> to origin.<br>
 - Create <b>Pull Request to this Repository</b>.<br>
 
-## 👩‍💻 Tech Stack 
-HTML5 , CSS3 , JS , ReactJS , Axios , Netlify , Git
 
 ## ⏳ Future Scope
     
-   1. Extending support for more languages
-   2. Making project PWA compatible
-   3. Collaboarate feature with other coders
-   4. Problem Statement and Solution
-   5. Ranking Leaderboard based on number of Problem Solved
-   6. Better UI for the App<br><br>
+   1. Implementation of the collaborative code editor.
+   2. Statement of the problem, submission of the code, and checking of the code.
+   3. Better UI for the App<br>
 
 <b><i>Star this Repository and you can visit to my profile and see some more Projects like this.</i></b>
-*Mail me at <a href="mailto:hi+CpBuddy@abhaygupta.me">hi@abhaygupta.me</a> for any collaboration and queries.*
+<br/>
+*Mail me at <a href="mailto:hi+CpBuddy@abhaygupta.me">hi@abhaygupta.me</a> for any collaboration or queries.*

@@ -1,0 +1,28 @@
+{
+  "name": "code-buddy-backend",
+  "version": "1.0.0",
+  "description": "This is the backend for Code Buddy, a all-in-one Coding platform, which includes numerous micro-services like Code Runner, Code sharing and Contest Watcher that is intended to assist Competitive Programming enthusiasts.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "Abhay Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "date-fns": "^2.23.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.2",
+    "node-fetch": "^2.6.7",
+    "node-fetch-npm": "^2.0.4",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

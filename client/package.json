@@ -1,0 +1,34 @@
+{
+  "name": "codebuddy",
+  "version": "0.0.0",
+  "description": "This is Code Buddy, a all-in-one Coding platform, which includes numerous micro-services like Code Runner, Code sharing and Contest Watcher that is intended to assist Competitive Programming enthusiasts.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@fortawesome/free-brands-svg-icons": "^6.1.2",
+    "@fortawesome/free-regular-svg-icons": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@headlessui/react": "^1.6.6",
+    "@heroicons/react": "^1.0.6",
+    "@monaco-editor/react": "^4.4.5",
+    "axios": "^0.27.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
+    "react-toastify": "^9.0.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react-refresh": "^1.3.1",
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8",
+    "vite": "^3.0.7"
+  }
+}

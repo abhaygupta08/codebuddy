@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* font imports */
+@font-face {
+  font-family: 'Dank Mono Regular';
+  src: url(/fonts/DankMono-Regular.ttf);
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  scroll-behavior: smooth;
+
+}
+
+
+
+::-webkit-scrollbar {
+  cursor: pointer;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7E22CE;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar {
+  cursor: pointer;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #7E22CE;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}::-webkit-scrollbar {
+  cursor: pointer;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #7E22CE;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+
+
+.link-hover {
+  padding-bottom: 1px;
+  position: relative;
+  cursor: pointer;
+}
+
+.link-hover::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transform: translateY(3px);
+  background: rgba(0, 0, 0, 0.685);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.link-hover:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.homeBg{
+  background-color: #F9F9F9;
+}
+
+
+button.participateBtn{
+  display : flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+button.participateBtn > div{
+  width : 1.2rem;
+  height : 2px;
+  background : white;
+      display: inline-block;
+  position : relative;
+  transition : transform 0.2s;
+}
+button.participateBtn > div:before{
+content: "";
+    width: 0.6rem;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    transform-origin: right;
+    transform: rotate(45deg);
+    margin-left : 0.1rem;
+}
+button.participateBtn > div:after{
+content: "";
+    width: 0.6rem;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    transform-origin: right;
+    transform: rotate(-45deg);
+    margin-left : 0.1rem;
+}
+button.participateBtn:hover > div{
+   transform : rotate(-45deg);
+}
+
+
+
+.link-slide {
+  display: inline-block;
+  position: relative;
+}
+
+.link-slide::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.link-slide:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
