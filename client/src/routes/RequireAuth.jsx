@@ -40,7 +40,7 @@ export default function RequireAuth ({ allowedRoles }) {
 
   const location = useLocation();
 
-if(isLoading) return <Loader />;
+if(isLoading) return <Loader width='20' height='20' />;
 
   if (auth?.roles?.find((role) => allowedRoles?.includes(role))) {
     return <Outlet {...location} />;

@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 import {  useNavigate } from 'react-router';
 import useSearchParams  from '../../hooks/useSearchParams';
 import AuthContext from '../../context/AuthProvider';
+import { Helmet } from 'react-helmet';
 
 export default function LoginPage() {
   const searchParams = useSearchParams();
@@ -52,7 +53,7 @@ export default function LoginPage() {
         roles: response?.data.roles,
       });
       
-      navigate(searchParams.next || '/snippets' , { replace: true });
+      navigate(searchParams.next || '/problemset' , { replace: true });
       toast.success('Logged in Successfully!', {
         position: 'bottom-right',
         autoClose: 3000,
@@ -79,6 +80,9 @@ export default function LoginPage() {
   };
   return (
     <>
+    <Helmet>
+      <title>Login</title>
+      </Helmet>
       <Header
         heading='Login to your account'
         paragraph="Don't have an account yet? "

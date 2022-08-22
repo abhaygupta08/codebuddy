@@ -50,12 +50,13 @@ export default function SnippetPage() {
     temp();
   }, []);
 
-  return (
-    <IDE
+  return (<>
+      <IDE
       author={responseData?.author}
       snippetTitle={responseData?.snippetTitle}
       snippetCode={responseData?.snippetCode}
       snippetLanguage={responseData?.snippetLanguage}
-    />
+      />
+      </>
   );
 }

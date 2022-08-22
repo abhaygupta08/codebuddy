@@ -3,6 +3,7 @@ import Config from './Config';
 import EditorComponent from './EditorComponent';
 import IdeAction from './ideAction';
 import Minimize from '../../assets/minimize.svg';
+import { Helmet } from 'react-helmet';
 export default function IDE({
   author,
   snippetTitle,
@@ -19,7 +20,7 @@ export default function IDE({
   
   void code_buddy() {
       // code here
-      cout<<"Wecome to Code Buddy :)";
+      cout<<"Welcome to Code Buddy :)";
   }
   
   int main() {
@@ -50,6 +51,10 @@ export default function IDE({
   }, [code]);
   return (
     <>
+            <Helmet>
+      <title>{snippetTitle ||'IDE'}</title>
+      </Helmet>
+
       <div className='relative flex justify-between w-full overflow-x-hidden bg-dark'>
         <div
           className={`absolute z-20 ${

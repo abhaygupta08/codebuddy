@@ -7,6 +7,7 @@ import Loader from '../../components/Loader';
 import constants from './constants';
 import LeftArrow from '../../assets/leftArrow.svg';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 export default function Site() {
   const params = useParams();
@@ -42,6 +43,9 @@ export default function Site() {
   }
   return (
     <>
+            <Helmet>
+      <title>{`${constants[params?.site_name]} - Contest Watcher`}</title>
+      </Helmet>
       <main className='px-12 py-14'>
         <button
           onClick={() => {

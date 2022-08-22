@@ -14,6 +14,9 @@ import Profile from '../pages/Profile';
 import AllSnippet from '../pages/Snippets/AllSnippet';
 import SnippetPage from '../pages/Snippets/SnippetPage';
 import NotFound from '../pages/NotFound';
+import CodeRoom from '../pages/CodeRoom';
+import Problem from '../pages/Problem';
+
 export default function RouteController() {
   return (
     <main style={{ minHeight: '100vh' }}>
@@ -30,6 +33,7 @@ export default function RouteController() {
             <Route path='/ide' element={<IDE />} />
 
             <Route path='/contest-watcher/*' element={<ContestWatcher />} />
+            <Route path='/code-room/*' element={<CodeRoom />} />
 
             <Route path='/logout' element={<Logout />} />
             <Route path='/user/*' element={<Profile />} />
@@ -38,6 +42,7 @@ export default function RouteController() {
             {/* Private Routes */}
             <Route element={<RequireAuth allowedRoles={[ROLES.User]} />} >
 
+            <Route path='/problemset/*' element={<Problem />} />
             <Route path='/snippets' element={<Navigate to={'./all'} replace />} />
             <Route path='/snippets/all' element={<AllSnippet/>} />
 

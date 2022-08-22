@@ -1,10 +1,9 @@
-import Loader from '../../components/Loader';
+import Loader from '../../../components/Loader';
 import React, { useEffect } from 'react';
-import Input from '../Account/components/Input';
-import CopyIcon from '../../components/CopyIcon';
-import axois from '../../api/axios';
-import { SAVE_SNIPPET_URL } from '../../constants';
-import { Helmet } from 'react-helmet';
+import Input from '../../Account/components/Input';
+import CopyIcon from '../../../components/CopyIcon';
+import axois from '../../../api/axios';
+import { SAVE_SNIPPET_URL } from '../../../constants';
 export default function ModalForm({
   heading = '',
   code,
@@ -57,11 +56,7 @@ export default function ModalForm({
   };
 
   if (showModal)
-    return (<>
-            <Helmet>
-      <title>Save Snippet - IDE</title>
-      </Helmet>
-
+    return (
       <div className='fixed inset-0 z-10 flex items-center justify-center h-screen min-h-full px-4 py-12 bg-gray-900/20 sm:px-6 lg:px-8'>
         <div
           onClick={() => {
@@ -177,7 +172,8 @@ export default function ModalForm({
               >
                 {isLoading ? (
                   <div className='flex '>
-                    <Loader small={true}  width='5' height='5' /> &nbsp; &nbsp;Saving
+                    <Loader small={true} width='5' height='5' /> &nbsp;
+                    &nbsp;Saving
                   </div>
                 ) : (
                   btnText
@@ -187,7 +183,6 @@ export default function ModalForm({
           </div>
         </div>
       </div>
-    </>
     );
   else return null;
 }

@@ -1,24 +1,22 @@
-import React, { useContext, useEffect } from 'react';
-import Loader from '../../components/Loader';
+import React from 'react';
+import Loader from '../../../components/Loader';
 import Constants from './Constants';
-import axios from '../../api/axios';
-import { RUNCODE_URL } from '../../constants';
-import AuthContext from '../../context/AuthProvider';
+import axios from '../../../api/axios';
+import { RUNCODE_URL, GET_ROOM_USERS } from '../../../constants';
 import ModalForm from './ModalForm';
+import { useParams } from 'react-router';
 
 export default function IdeAction({
   code,
   input,
   selectedLanguage,
   setOutput,
-  info,
-  author,
-  snippetTitle,
+  setIoVisible
 }) {
-  const { auth } = useContext(AuthContext);
+  const params = useParams();
   const [isLoading, setIsLoading] = React.useState(false);
   const [showModal, setShowModal] = React.useState(false);
-
+ 
   const handleRunCode = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -39,6 +37,7 @@ export default function IdeAction({
       setOutput(
         response.data.stdout || response.data.stderr || response.data.error
       );
+      setIoVisible(true);
     } catch (error) {
       setOutput(error);
     } finally {
@@ -47,13 +46,14 @@ export default function IdeAction({
   };
   return (
     <div className='flex items-center justify-end px-12 pb-1.5 pt-2 -my-0.5 bg-dark'>
-      {author && snippetTitle && (
-        <div className='mr-auto text-sm text-center text-white'>
-          <span>{snippetTitle}</span>
-          <span className='opacity-60'> ,by {author}</span>
-        </div>
-      )}
-      <div className='mr-4 text-sm text-center text-white'>{info || ''}</div>
+
+      <div
+      onClick={() => {
+        setIoVisible(true);
+        
+      }
+      }
+      className= 'mr-auto text-white cursor-pointer'>{selectedLanguage}</div>
       {/* Modal */}
       <ModalForm
         heading={'Save as Snippet'}
@@ -69,23 +69,13 @@ export default function IdeAction({
       ></ModalForm>
       {/* Modal */}
 
-      {auth?.username && (
-        <button
-          className='relative flex justify-center px-4 py-2 my-1 mr-4 text-sm font-medium text-white bg-purple-600 border border-transparent rounded-md group hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500'
-          onClick={() => {
-            setShowModal(true);
-          }}
-        >
-          Save as Snippet
-        </button>
-      )}
       <button
         className='relative flex justify-center px-4 py-2 my-1 text-sm font-medium text-white bg-purple-600 border border-transparent rounded-md group hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500'
         onClick={handleRunCode}
       >
         {isLoading ? (
           <>
-            <Loader  small={true} width='5' height='5' /> &nbsp; &nbsp;Executing
+            <Loader width='5' small={true} height='5' /> &nbsp; &nbsp;Executing
           </>
         ) : (
           'Run Code'

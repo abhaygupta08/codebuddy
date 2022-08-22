@@ -6,6 +6,7 @@ import SnippetCard from './SnippetCard';
 import useSearchParams from '../../hooks/useSearchParams';
 import LeftArrow from '../../assets/leftArrow.svg';
 import { useNavigate } from 'react-router';
+import { Helmet } from 'react-helmet';
 
 export default function Snippets() {
   const params = useSearchParams();
@@ -26,6 +27,9 @@ export default function Snippets() {
 
   return (
     <>
+        <Helmet>
+      <title>All Snippets</title>
+      </Helmet>
       <main className='px-12 py-14'>
         {params?.snippetLanguage && (
           <>

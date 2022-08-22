@@ -16,7 +16,7 @@ export default function FormAction({
             handleSubmit(e);
           }}
         >
-          {isLoading ? <Loader width='5' height='5' /> : text}
+          {isLoading ? <Loader width='5' small={true} height='5' /> : text}
         </button>
       ) : (
         <></>

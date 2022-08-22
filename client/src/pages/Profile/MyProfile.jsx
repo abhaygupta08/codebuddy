@@ -6,6 +6,7 @@ import SnippetCard from '../Snippets/SnippetCard';
 import axios from '../../api/axios';
 import { ALL_PUBLIC_SNIPPETS } from '../../constants';
 import { useParams } from 'react-router';
+import { Helmet } from 'react-helmet';
 
 export default function MyProfile() {
   const params = useParams();
@@ -38,6 +39,9 @@ export default function MyProfile() {
 
   return (
     <>
+        <Helmet>
+      <title>{ params?.username || auth?.username || ''}</title>
+      </Helmet>
       <main className='px-12 py-14'>
         <div className='flex flex-col items-center justify-center gap-2'>
           <div className='flex items-center justify-center overflow-hidden font-bold text-white bg-gray-800 rounded-full text-9xl w-36 h-36'>

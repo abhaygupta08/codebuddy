@@ -2,6 +2,8 @@ const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
   mode: 'jit',
+  plugins: [
+    require('@tailwindcss/typography'),],
   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -14,7 +16,7 @@ module.exports = {
       colors: {
         dark: '#2E3035',
       },
-      red :{
+      red: {
         '100': '#FFF5F5',
         '200': '#FED7D7',
         '300': '#FBB6B6',

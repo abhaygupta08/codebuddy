@@ -3,6 +3,7 @@ import Card from './components/Card';
 import { ALL_CONTEST_URL } from '../../constants';
 import axios from '../../api/axios';
 import Loader from '../../components/Loader';
+import { Helmet } from 'react-helmet';
 
 export default function AllContests() {
   const [AllContests, setAllContests] = React.useState([]);
@@ -35,6 +36,9 @@ export default function AllContests() {
 
   return (
     <>
+            <Helmet>
+      <title>Contest Watcher </title>
+      </Helmet>
       <main className='px-12 py-14'>
         <h1 className='text-3xl font-bold'>Contest Watcher</h1>
         <p className='text-sm opacity-60'>

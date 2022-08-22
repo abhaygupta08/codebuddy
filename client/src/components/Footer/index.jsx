@@ -65,7 +65,7 @@ export default function Footer() {
         <div className='h-px text-center w-72 bg-white/20' />
         <div className='flex gap-4 text-center'>
           <a href='mailto:codeBuddy+itsabhay08@outlook.com' ><img src={mail} alt=''/></a>
-          <a href='#' target='_blank' ><img src={github} alt=''/></a>
+          <a href='https://github.com/abhaygupta08/codebuddy/' target='_blank' ><img src={github} alt=''/></a>
           <a href='https://www.linkedin.com/in/abhaygupta08/' target='_blank' ><img src={linkedin} alt=''/></a>
           <a href='https://twitter.com/abhay_gupta08/' target='_blank' ><img src={twitter} alt=''/></a>
         </div>

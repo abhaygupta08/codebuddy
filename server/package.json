@@ -20,6 +20,7 @@
     "mongoose": "^6.5.2",
     "node-fetch": "^2.6.7",
     "node-fetch-npm": "^2.0.4",
+    "socket.io": "^4.5.1",
     "uuid": "^8.3.2"
   },
   "devDependencies": {

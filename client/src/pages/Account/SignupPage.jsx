@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 import axios from '../../api/axios';
 import { REGISTER_URL } from '../../constants';
 import { useNavigate } from 'react-router';
+import { Helmet } from 'react-helmet';
 
 export default function SignupPage() {
   const navigate = useNavigate();
@@ -92,6 +93,9 @@ export default function SignupPage() {
   };
   return (
     <>
+        <Helmet>
+      <title>Singup</title>
+      </Helmet>
       <Header
         heading='Signup to create an account'
         paragraph='Already have an account? '

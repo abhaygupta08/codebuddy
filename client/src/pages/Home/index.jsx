@@ -11,7 +11,7 @@ import list from '../../assets/list.svg';
 import filter from '../../assets/filter.svg';
 import Feedback from './components/Feedback';
 import Loader from '../../components/Loader';
-
+import Share from '../../assets/Share.svg';
 export default function Home() {
   const [isLoading, setIsLoading] = React.useState(true);
 
@@ -75,7 +75,7 @@ export default function Home() {
                   peers.
                 </span>
               }
-              img={hash}
+              img={Share}
             />
           </div>
         </div>
@@ -181,6 +181,8 @@ const FeatureCard = ({ content, img, customClass }) => {
 };
 
 const NavigateBtn = ({ link, label = 'Try out IDE' }) => {
+  const navigate = useNavigate();
+
   return (
     <div className='relative max-w-4xl mx-auto'>
       <button

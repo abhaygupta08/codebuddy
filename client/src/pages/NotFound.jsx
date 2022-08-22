@@ -1,8 +1,13 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import NotFoundimg from '../assets/NotFound.svg';
 import ParticipateBtn from './ContestWatcher/components/ParticipateBtn';
 export default function NotFound() {
-  return (
+  return (<>
+          <Helmet>
+      <title>Page not found </title>
+      </Helmet>
+
     <div className='flex items-center justify-center min-h-full px-4 py-8 sm:px-6 lg:px-8'>
       <div className='w-full max-w-xl text-center'>
         <img src={NotFoundimg} alt='Not Found' />
@@ -17,5 +22,6 @@ export default function NotFound() {
         </div>
       </div>
     </div>
+  </>
   );
 }
