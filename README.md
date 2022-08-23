@@ -34,7 +34,7 @@ Solve problems online and share your code with the world.
 <img src='./server/public/images/AllProblemsSS.png' alt=''>
 <h4>Code Room</h4>
 Online room for collaborating on code.
-<img src='./server/public/images/codeRoom.png' alt=''>
+<img src='./server/public/images/codeRoom.PNG' alt=''>
 <br>
 
 <h2>👩‍💻 Tech Stack </h2>
