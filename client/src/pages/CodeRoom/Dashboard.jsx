@@ -99,7 +99,8 @@ const JoinRoom = ({ socket }) => {
 
           <button
             disabled={isLoading}
-            onClick={() => {
+            onClick={(e) => {
+              e.preventDefault();
               handleJoinRoom();
             }}
             className='flex justify-center px-4 py-2 mx-auto text-sm font-medium text-white bg-purple-600 border border-transparent rounded-md max-w-1/2 group hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500'
